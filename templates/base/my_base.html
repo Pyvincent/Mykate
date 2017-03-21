@@ -8,11 +8,11 @@
 
 {% block head %}
     {{ super() }}
-    <link rel="shortcut icon" href="{{ url_for('static', filename = 'inhand-logo.ico') }}"
+    <link rel="shortcut icon" href="{{ url_for('common_static', filename = 'inhand-logo.ico') }}"
           type="image/x-icon">
-    <link rel="icon" href="{{ url_for('static', filename = 'inhand-logo.ico') }}"
+    <link rel="icon" href="{{ url_for('common_static', filename = 'inhand-logo.ico') }}"
           type="image/x-icon">
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main.css') }}"
+    <link rel="stylesheet" href="{{ url_for('common_static', filename = 'css/main.css') }}"
           type="text/css"/>
 {% endblock %}
 
@@ -28,7 +28,7 @@
                     <span class="icon-bar"></span>
                 </button>
 {#                <a class="navbar-brand" href="/">#}
-{#                    <img alt="Brand" src="../../static/inhand-logo.ico">#}
+{#                    <img alt="Brand" src="../../common_static/inhand-logo.ico">#}
 {#                </a>#}
                 <a class="navbar-brand" href="/">Vincent</a>
             </div>

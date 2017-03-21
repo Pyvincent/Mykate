@@ -9403,8 +9403,8 @@ jQuery.offset = {
 	setOffset: function( elem, options, i ) {
 		var position = jQuery.css( elem, "position" );
 
-		// set position first, in-case top/left are set even on static elem
-		if ( position === "static" ) {
+		// set position first, in-case top/left are set even on common_static elem
+		if ( position === "common_static" ) {
 			elem.style.position = "relative";
 		}
 
@@ -9487,7 +9487,7 @@ jQuery.fn.extend({
 	offsetParent: function() {
 		return this.map(function() {
 			var offsetParent = this.offsetParent || document.documentElement;
-			while ( offsetParent && ( !jQuery.nodeName( offsetParent, "html" ) && jQuery.css( offsetParent, "position") === "static" ) ) {
+			while ( offsetParent && ( !jQuery.nodeName( offsetParent, "html" ) && jQuery.css( offsetParent, "position") === "common_static" ) ) {
 				offsetParent = offsetParent.offsetParent;
 			}
 			return offsetParent || document.documentElement;

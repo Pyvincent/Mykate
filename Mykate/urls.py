@@ -16,14 +16,15 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from content import views as content_views
-from kate.views import ulist
+from kate.views import ulist as kate_ulist
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', content_views.index, name='index'),
     url(r'^index/$', content_views.index, name='index'),
+
     url(r'^login/$', content_views.login, name='login'),
-    url(r'^ulist/$', ulist, name='ulist'),
+    url(r'^ulist/$', kate_ulist, name='ulist'),
 
 
     url(r'^add/$', content_views.add, name='add'),

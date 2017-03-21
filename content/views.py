@@ -22,8 +22,8 @@ def index(request):
 
 # GET 传入参数的方式计算加法 /add/?a=3&b=4
 def add(request):
-    a = request.GET.get('a', 0)  # a = request.GET['a'] ,b
-    b = request.GET.get('b', 0)
+    a = request.GET.get('a', None)  # a = request.GET['a'] ,b
+    b = request.GET.get('b', None)
     c = int(a) + int(b)
     return HttpResponse(str(c))
 
