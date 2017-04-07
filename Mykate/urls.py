@@ -20,12 +20,13 @@ from kate.views import ulist as kate_ulist
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^test/$', content_views.test, name='test'),
+
     url(r'^$', content_views.index, name='index'),
     url(r'^index/$', content_views.index, name='index'),
 
     url(r'^login/$', content_views.login, name='login'),
     url(r'^ulist/$', kate_ulist, name='ulist'),
-
 
     url(r'^add/$', content_views.add, name='add'),
     url(r'^add/(\d+)/(\d+)/$', content_views.old_add2_redirect),

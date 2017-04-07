@@ -5,6 +5,7 @@ uwsgi --http :8001 --wsgi-file test.py
 运行配置文件
 
  uwsgi --ini myweb_uwsgi.ini
+ http://127.0.0.1:8099/
 
 
 sudo apt-get install nginx  #安装
