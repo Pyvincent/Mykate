@@ -27,6 +27,9 @@ def index(request):
 def login(reuest):
     return render(reuest, 'content/login.html')
 
+def about_me(reuest):
+    return render(reuest, 'aboutme/aboutme.html')
+
 
 # GET 传入参数的方式计算加法 /add/?a=3&b=4
 def add(request):

@@ -28,6 +28,8 @@ urlpatterns = [
     url(r'^login/$', content_views.login, name='login'),
     url(r'^ulist/$', kate_ulist, name='ulist'),
 
+    url(r'^aboutme/$', content_views.about_me, name='aboutme'),
+
     url(r'^add/$', content_views.add, name='add'),
     url(r'^add/(\d+)/(\d+)/$', content_views.old_add2_redirect),
     url(r'^new_add/(\d+)/(\d+)/$', content_views.add2, name='add2')

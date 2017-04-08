@@ -37,13 +37,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">王少兵的官方网站</a>
+                <a class="navbar-brand" href="/">王少兵的官方网站</a>
                 {#                <a class="navbar-brand" href=" "><img src="{% static 'img/vincent_logo.png' %}" alt="responsive Mega Menu"/></a>#}
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <!--向左对齐-->
                 <ul class="nav navbar-nav">
-                    <li><a href="#">平台数据<span class="sr-only">(current)</span></a></li>
+                    <li><a href="/ulist">平台数据<span class="sr-only">(current)</span></a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false" data-target="#dropdown"><span class="glyphicon glyphicon-tasks"
@@ -65,7 +65,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#">语言学习<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">视频教程<span class="sr-only">(current)</span></a></li>
                     <li><a href="#">生活感悟</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -88,7 +88,7 @@
                             </ul>
                             <ul style="padding-left: 5px">
                                 <li class="nav-title">扯淡语</li>
-                                <li><a href="#">我是谁</a></li>
+                                <li><a href="/aboutme">我是谁</a></li>
                                 <li><a href="#">我从哪里来</a></li>
                                 <li><a href="#">要到哪里去</a></li>
                                 <li><a href="#">有没有外星人</a></li>
@@ -130,14 +130,14 @@
     </div>
 
 {% endblock %}
-
+<br><br>
 {% block content %}
 {% endblock %}
 
 {% block footer %}
     <hr class="container">
     <footer class="container">
-        <p>这是王少兵的网站，目前还是测试阶段，请期待...<a href="http://www.wangshaobing.com:8000" title="Vincent Site" target="_blank">Vincent
+        <p>这是王少兵的网站，目前还是测试阶段，请期待...<a href="http://wangshaobing.com:8000" title="Vincent Site" target="_blank">Vincent
             Thanks</a></p>
     </footer>
 {% endblock %}
