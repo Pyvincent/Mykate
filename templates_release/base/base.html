@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>{% block title %}
@@ -13,31 +13,22 @@
             Vincent`s Site
         {% endif %}
     {% endblock %} </title>
-
-    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-3.2.0.min.js' %}"></script>
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/bootstrap-responsive.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/mega-menu.css' %}" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-
+    <script type="text/javascript" src="{% static 'js/myjs.js' %}"></script>
     <!-- Le Google font -->
     <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet'
           type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
-
-    <style>
-        body {
-            padding-top: 50px; /* 60px to make the container go all the way to the bottom of the topbar */
-        }
-    </style>
 </head>
 <body>
 {% block header %}
-    <header class="navbar navbar-inverse navbar-fixed-top" id="top">
-        <div class="container-fluid" role="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" id="top" role="navigation">
+        <nav class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -46,10 +37,98 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href=" "><img src="{% static 'img/vincent_logo.png' %}" alt="responsive Mega Menu"/></a>
+                <a class="navbar-brand" href="#">王少兵的官方网站</a>
+                {#                <a class="navbar-brand" href=" "><img src="{% static 'img/vincent_logo.png' %}" alt="responsive Mega Menu"/></a>#}
             </div>
-        </div>
-    </header>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!--向左对齐-->
+                <ul class="nav navbar-nav">
+                    <li><a href="#">平台数据<span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false" data-target="#dropdown"><span class="glyphicon glyphicon-tasks"
+                                                                               aria-hidden="true"></span> 开发建设<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <li><a href="#"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span>网络抓取</a>
+                            </li>
+                            <li><a href="#"><span class="glyphicon glyphicon-eye-open"
+                                                  aria-hidden="true"></span>数据分析</a>
+                            </li>
+                            <li><a href="#"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>视图展示</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-king" aria-hidden="true"></span>流言和绯语</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-queen" aria-hidden="true"></span>在人间</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">语言学习<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">生活感悟</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                            关于我 <span class="caret"></span></a>
+
+
+                        <section class="dropdown-menu mega-menu-3 transition">
+                            <ul style="padding-left: 5px">
+                                <li class="nav-title">照片</li>
+                                <li class="with-image"><img src="{% static 'img/180.jpg' %}" alt="Cool Product"
+                                                            class="thumbnail img-rounded"/></li>
+                                {#                                <li><a href="#" class="no-background"><img src="{% static 'img/paypal-buy-now.gif' %}"#}
+                                {#                                                                           alt="Buy Now"/></a>#}
+                                {#                                </li>#}
+                            </ul>
+                            <ul style="padding-left: 14px">
+                                <li class="nav-title">自我介绍</li>
+                                <li><p>我和谁都不争 和谁争我都不屑 我爱大自然 其次就是艺术 我双手烤着 生命之火取暖 火萎了 我也准备走了</p></li>
+                            </ul>
+                            <ul style="padding-left: 5px">
+                                <li class="nav-title">扯淡语</li>
+                                <li><a href="#">我是谁</a></li>
+                                <li><a href="#">我从哪里来</a></li>
+                                <li><a href="#">要到哪里去</a></li>
+                                <li><a href="#">有没有外星人</a></li>
+                                <li><a href="#">宇宙有没有边界</a></li>
+                                <li><a href="#">好头疼</a></li>
+                            </ul>
+                            <ul class="mega-wide add-products" style="padding-left: 5px">
+                                <li class="nav-title"><i class="icon-picture"></i> 展示</li>
+                                <li class="with-image"><a href="#" class="no-background no-padding"><img
+                                        src="{% static 'img/product.jpg' %}"
+                                        alt="Cool Product"
+                                        class="thumbnail"/></a></li>
+                                <li class="with-image"><a href="#" class="no-background no-padding"><img
+                                        src="{% static 'img/product.jpg' %}"
+                                        alt="Cool Product"
+                                        class="thumbnail"/></a></li>
+                            </ul>
+                        </section>
+
+                    </li>
+
+                </ul>
+
+                <!--向右对齐-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+                </ul>
+                <div>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm">提交</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+
 {% endblock %}
 
 {% block content %}
