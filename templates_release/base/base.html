@@ -13,6 +13,7 @@
             Vincent`s Site
         {% endif %}
     {% endblock %} </title>
+    <link rel="shortcut icon" href="{% static 'img/kate1logo.png' %}">
     <script type="text/javascript" src="{% static 'js/jquery-3.2.0.min.js' %}"></script>
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/bootstrap-responsive.css' %}" rel="stylesheet" type="text/css">
@@ -21,13 +22,24 @@
     <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/myjs.js' %}"></script>
     <!-- Le Google font -->
-    <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet'
-          type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800|Roboto:100,300,700&subset=latin-ext"
+          rel="stylesheet">
+    {#    <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet'#}
+    {#          type='text/css'>#}
+    {#    <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>#}
+    {#    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>#}
+    {#    <link href='https://fonts.googleapis.com/css?family=Lato:300,300italic,400' rel='stylesheet' type='text/css'>#}
+    <style>
+        * {
+            -webkit-border-radius: 0 !important;
+            -moz-border-radius: 0 !important;
+            border-radius: 0 !important;
+        }
+        {% block style %}{% endblock %}</style>
 </head>
 <body>
 {% block header %}
-    <div class="navbar navbar-inverse navbar-fixed-top" id="top" role="navigation">
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin: 0">
         <nav class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -37,12 +49,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">王少兵的官方网站</a>
-                {#                <a class="navbar-brand" href=" "><img src="{% static 'img/vincent_logo.png' %}" alt="responsive Mega Menu"/></a>#}
+                <a class="navbar-brand" href="/"  style="padding-top: 10px;padding-right: 5px"><img src="{% static 'img/palette_white.png' %}" width="30" height="30"
+                                                      alt="Vincent"/></a>
+                <a class="navbar-brand" href="/">Vincent</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <!--向左对齐-->
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav" id="nav-bar">
                     <li><a href="/ulist">平台数据<span class="sr-only">(current)</span></a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -78,9 +91,6 @@
                                 <li class="nav-title">照片</li>
                                 <li class="with-image"><img src="{% static 'img/180.jpg' %}" alt="Cool Product"
                                                             class="thumbnail img-rounded"/></li>
-                                {#                                <li><a href="#" class="no-background"><img src="{% static 'img/paypal-buy-now.gif' %}"#}
-                                {#                                                                           alt="Buy Now"/></a>#}
-                                {#                                </li>#}
                             </ul>
                             <ul style="padding-left: 14px">
                                 <li class="nav-title">自我介绍</li>
@@ -89,11 +99,11 @@
                             <ul style="padding-left: 5px">
                                 <li class="nav-title">扯淡语</li>
                                 <li><a href="/aboutme">我是谁</a></li>
-                                <li><a href="#">我从哪里来</a></li>
-                                <li><a href="#">要到哪里去</a></li>
-                                <li><a href="#">有没有外星人</a></li>
-                                <li><a href="#">宇宙有没有边界</a></li>
-                                <li><a href="#">好头疼</a></li>
+                                <li><a href="/aboutme/#section-2">我从哪里来</a></li>
+                                <li><a href="/aboutme/#section-3">要到哪里去</a></li>
+                                <li><a href="/aboutme/#section-4">有没有外星人</a></li>
+                                <li><a href="/aboutme/#section-5">宇宙有没有边界</a></li>
+                                <li><a href="/aboutme/#section-6">好头疼</a></li>
                             </ul>
                             <ul class="mega-wide add-products" style="padding-left: 5px">
                                 <li class="nav-title"><i class="icon-picture"></i> 展示</li>
@@ -107,11 +117,8 @@
                                         class="thumbnail"/></a></li>
                             </ul>
                         </section>
-
                     </li>
-
                 </ul>
-
                 <!--向右对齐-->
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
@@ -128,18 +135,24 @@
             </div>
         </nav>
     </div>
-
 {% endblock %}
-<br><br>
 {% block content %}
 {% endblock %}
-
 {% block footer %}
-    <hr class="container">
-    <footer class="container">
-        <p>这是王少兵的网站，目前还是测试阶段，请期待...<a href="http://wangshaobing.com:8000" title="Vincent Site" target="_blank">Vincent
-            Thanks</a></p>
-    </footer>
+    {#    <hr class="container">#}
+    {#    <footer class="container">#}
+    {#        <p>这是王少兵的网站，目前还是测试阶段，请期待...<a href="http://wangshaobing.com:8000" title="Vincent Site" target="_blank">Vincent#}
+    {#            Thanks</a></p>#}
+    {#    </footer>#}
+
+    <div class="panel panel-footer panel-danger" style="background: #111111;margin: 0">
+        <div class="container">
+            <div class="panel-body" style="text-align: center">
+                <p>这是王少兵的网站，目前还是测试阶段，请期待...<a href="http://wangshaobing.com:8000" title="Vincent Site" target="_blank">Copyright
+                    information</a></p>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 </body>
