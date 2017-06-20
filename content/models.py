@@ -1,4 +1,4 @@
-# coding:utf-8
+# -*- coding:utf-8 -*-
 from __future__ import unicode_literals  # python3兼容python2
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible

@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 from django.db import models
 
 
@@ -10,7 +11,7 @@ class Person(models.Model):
 
     def my_property(self):
         return self.name+"-->"+self.email
-    my_property.short_description="这是描述信息，格式化姓名"
+    my_property.short_description=u"这是描述信息，格式化姓名"
     format_name=property(my_property)
 
     class Meta:
