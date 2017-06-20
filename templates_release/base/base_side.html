@@ -2,13 +2,6 @@
 {% load staticfiles %}
 {% block style %}
     <style xmlns="http://www.w3.org/1999/html">
-        ul.nav-tabs {
-            width: 140px;
-            margin-top: 20px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
-        }
 
         ul.nav-tabs li {
             margin: 0;
@@ -39,9 +32,9 @@
             border-radius: 0 0 4px 4px;
         }
 
-        ul.nav-tabs.affix {
-            top: 30px; /* Set the top position of pinned element */
-        }
+{#        ul.nav-tabs.affix {#}
+{#            top: 30px; /* Set the top position of pinned element */#}
+{#        }#}
 
         .jumbotron {
             background-color: #009acd;
@@ -56,15 +49,18 @@
     </style>
 {% endblock %}
 {% block content %}
-    <div class="jumbotron">
+
+    <div class="jumbotron masthead">
         <div class="container">
-            <h1>窗前明月光,疑是地上霜</h1>
-            <p>永远不要在人前调侃你的理想，你为它付出的是生命。</p>
+            <h1>窗前明月光 疑是地上霜</h1>
+            <h1>举头望明月 低头思故乡</h1>
+            <p>永远不要在人前调侃你的理想，你为它付出的是生命。</p><br>
             <p><a class="btn btn-primary btn-lg" role="button">
                 点了没用</a>
             </p>
         </div>
     </div>
+
     {% block aboutme %}
     {% endblock %}
 {% endblock %}

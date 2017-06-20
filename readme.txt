@@ -31,3 +31,11 @@ sudo service nginx configtest 或 /path/to/nginx -t
 
 重启 nginx 服务器：
 sudo service nginx reload 或 sudo service nginx restart 或 /path/to/nginx -s reload
+
+
+/alidata/server/mysql/bin/mysqladmin -u root password '这里就是密码'
+
+用root账号登录mysql
+
+mysql -uroot -p
+GRANT ALL PRIVILEGES ON *.* TO root IDENTIFIED BY "这里就是密码"
