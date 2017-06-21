@@ -39,3 +39,13 @@ sudo service nginx reload 或 sudo service nginx restart 或 /path/to/nginx -s r
 
 mysql -uroot -p
 GRANT ALL PRIVILEGES ON *.* TO root IDENTIFIED BY "这里就是密码"
+
+比如你想给某一个endpoint发送TCP请求
+nc 192.168.0.11 8000 < data
+就将data的内容发送到对端。
+nc可以当做服务器，监听某个端口号
+nc -l 8000 > received_data
+把某一次请求的内容存储到received_data里。
+上边只监听一次，如果多次可以加上-k参数
+
+nc -lk 8000
