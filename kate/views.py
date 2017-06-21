@@ -1,6 +1,5 @@
-
+# -*- coding: UTF-8 -*-
 from django.shortcuts import render
-
 from kate.models import Person
 
 

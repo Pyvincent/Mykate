@@ -18,7 +18,7 @@ from django.contrib import admin
 from content import views as content_views
 from kate.views import ulist as kate_ulist
 
-urlpatterns = [
+urlpatterns = {
     url(r'^admin/', admin.site.urls),
     url(r'^test/$', content_views.test, name='test'),
 
@@ -34,4 +34,4 @@ urlpatterns = [
     url(r'^add/$', content_views.add, name='add'),
     url(r'^add/(\d+)/(\d+)/$', content_views.old_add2_redirect),
     url(r'^new_add/(\d+)/(\d+)/$', content_views.add2, name='add2')
-]
+}
