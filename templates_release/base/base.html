@@ -21,7 +21,7 @@
     <meta name="application-name" content="importall.cn">
 
     <!-- Site CSS -->
-{#    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">#}
+    {#    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">#}
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://static.bootcss.com/www/assets/css/site.min.css?1497799589463" rel="stylesheet">
 
@@ -74,7 +74,7 @@
                                 class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                             <li><a href="/ulist"><span class="glyphicon glyphicon-fire"
-                                                  aria-hidden="true"></span>网络抓取</a>
+                                                       aria-hidden="true"></span>网络抓取</a>
                             </li>
                             <li><a href="#"><span class="glyphicon glyphicon-eye-open"
                                                   aria-hidden="true"></span>数据分析</a>
@@ -132,8 +132,8 @@
                 </ul>
                 <!--向右对齐-->
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/account/register"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
-                    <li><a href="/account/login"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
                 </ul>
                 <div>
                     <form class="navbar-form navbar-right" role="search">
@@ -150,14 +150,10 @@
 {% block content %}
 {% endblock %}
 {% block footer %}
-
-    <div class="panel panel-footer panel-danger" style="background: #111111;margin: 0">
-        <div class="container">
-            <div class="panel-body" style="text-align: center">
-                <p>这是王少兵的网站，目前还是测试阶段，请期待...<a href="http://www.importall.cn" title="Vincent Site" target="_blank">Copyright
-                    information</a></p>
-            </div>
-        </div>
+    <hr>
+    <div class="panel-body" style="text-align: center">
+        <p>@2017 京ICP备17041217号 联系人:Vincent | <a href="http://www.importall.cn" title="Vincent Site" target="_blank">Copyright
+            information</a></p>
     </div>
 {% endblock %}
 

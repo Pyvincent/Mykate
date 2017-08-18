@@ -18,14 +18,20 @@ from django.contrib import admin
 from content import views as content_views
 from kate.views import ulist as kate_ulist
 
-urlpatterns = {
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register(r'users', content_views.UserViewSet)
+router.register(r'groups', content_views.GroupViewSet)
+
+urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^test/$', content_views.test, name='test'),
 
     url(r'^$', content_views.index, name='index'),
     url(r'^index/$', content_views.index, name='index'),
 
-    url(r'^account/', include('users.urls')),
+    # url(r'^account/', include('users.urls')),
     url(r'^login/$', content_views.login, name='login'),
     url(r'^ulist/$', kate_ulist, name='ulist'),
 
@@ -33,5 +39,11 @@ urlpatterns = {
 
     url(r'^add/$', content_views.add, name='add'),
     url(r'^add/(\d+)/(\d+)/$', content_views.old_add2_redirect),
-    url(r'^new_add/(\d+)/(\d+)/$', content_views.add2, name='add2')
-}
+    url(r'^new_add/(\d+)/(\d+)/$', content_views.add2, name='add2'),
+
+]
+urlpatterns += [
+    url(r'^api/', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+
+]
