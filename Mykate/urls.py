@@ -32,7 +32,6 @@ urlpatterns = [
     url(r'^index/$', content_views.index, name='index'),
 
     # url(r'^account/', include('users.urls')),
-    url(r'^login/$', content_views.login, name='login'),
     url(r'^ulist/$', kate_ulist, name='ulist'),
 
     url(r'^aboutme/$', content_views.about_me, name='aboutme'),

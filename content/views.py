@@ -46,9 +46,6 @@ def index(request):
     return render(request, 'index.html')
 
 
-def login(reuest):
-    return render(reuest, 'content/login.html')
-
 def about_me(reuest):
     return render(reuest, 'aboutme/aboutme.html')
 
