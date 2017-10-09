@@ -1,0 +1,57 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% block title %}Page 404{% endblock %}
+{% block style %}
+    <style xmlns="http://www.w3.org/1999/html">
+
+        ul.nav-tabs li {
+            margin: 0;
+            border-left: 1px solid #ddd;
+        }
+
+        ul.nav-tabs li:first-child {
+            border-top: none;
+        }
+
+        ul.nav-tabs li a {
+            margin: 0;
+            padding: 8px 16px;
+            border-radius: 0;
+        }
+
+        ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover {
+            color: #fff;
+            background: #0088cc;
+            border: 1px solid #0088cc;
+        }
+
+        ul.nav-tabs li:first-child a {
+            border-radius: 4px 4px 0 0;
+        }
+
+        ul.nav-tabs li:last-child a {
+            border-radius: 0 0 4px 4px;
+        }
+        .jumbotron {
+            background-color: #009acd;
+            background-image: url("{% static 'img/jumbotron-background-cb04e0f2d6d.png' %}");
+            text-align: center;
+            font-family: Lato, sans-serif;
+            text-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px;
+            margin-bottom: 0px;
+            padding: 40px 0;
+
+        }
+    </style>
+{% endblock %}
+{% block content %}
+
+    <div class="jumbotron masthead">
+        <div class="container">
+            <h1>窗前明月光 疑是地上霜</h1>
+            <h1>举头望明月 低头思故乡</h1>
+            <p>页面找不到了-404</p><br>
+        </div>
+    </div>
+
+{% endblock %}

@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from content import views as content_views
 from kate.views import ulist as kate_ulist
+from kate.views import handler404, handler500, handler403
 
 from rest_framework import routers
 
@@ -46,3 +47,6 @@ urlpatterns += [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
 ]
+handler404 = handler404
+handler403 = handler403
+handler500 = handler500
